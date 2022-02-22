@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud;
+package ssau.kuznetsov.tacocloud.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.tacos;
+package ssau.kuznetsov.tacocloud.models;
 
 import lombok.Data;
 

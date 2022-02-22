@@ -1,12 +1,8 @@
 package ssau.kuznetsov.tacocloud.repositories;
 
+import org.springframework.data.repository.CrudRepository;
 import ssau.kuznetsov.tacocloud.models.Ingredient;
 
-public interface IngredientRepository {
-
-    Iterable<Ingredient> findAll();
-
-    Ingredient findOne(String id);
-
-    Ingredient save(Ingredient ingredient);
+public interface IngredientRepository
+        extends CrudRepository<Ingredient, String> {
 }

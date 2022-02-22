@@ -5,13 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import ssau.kuznetsov.tacocloud.models.Ingredient;
 import ssau.kuznetsov.tacocloud.models.Ingredient.Type;
+import ssau.kuznetsov.tacocloud.models.Order;
 import ssau.kuznetsov.tacocloud.models.Taco;
 import ssau.kuznetsov.tacocloud.repositories.IngredientRepository;
+import ssau.kuznetsov.tacocloud.repositories.TacoRepository;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -21,13 +21,20 @@ import java.util.stream.Collectors;
 @Slf4j
 @Controller
 @RequestMapping("/design")
+@SessionAttributes("order")
 public class DesignController {
 
     private final IngredientRepository ingredientRepo;
 
+    private final TacoRepository designRepo;
+
     @Autowired
-    public DesignController(IngredientRepository ingredientRepo) {
+    public DesignController(
+            IngredientRepository ingredientRepo,
+            TacoRepository designRepo) {
+
         this.ingredientRepo = ingredientRepo;
+        this.designRepo = designRepo;
     }
 
     @GetMapping
@@ -44,13 +51,27 @@ public class DesignController {
         return "design";
     }
 
+    @ModelAttribute(name = "order")
+    public Order order() {
+        return new Order();
+    }
+
+    @ModelAttribute(name = "taco")
+    public Taco taco() {
+        return new Taco();
+    }
+
     @PostMapping
-    public String processDesign(@Valid Taco design, Errors errors) {
+    public String processDesign(
+            @Valid Taco design, Errors errors,
+            @ModelAttribute Order order) {
+
         if (errors.hasErrors()) {
             return "design";
         }
 
-        log.info("Processing design: " + design);
+        Taco saved = designRepo.save(design);
+        order.addDesign(saved);
 
         return "redirect:/orders/current";
     }

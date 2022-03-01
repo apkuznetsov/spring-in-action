@@ -1,7 +1,9 @@
 package ssau.kuznetsov.tacocloud.rest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.hateoas.server.EntityLinks;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +18,9 @@ import java.util.Optional;
 public class DesignRestController {
 
     private final TacoRepository tacoRepo;
+
+    @Autowired
+    EntityLinks entityLinks;
 
     public DesignRestController(TacoRepository tacoRepo) {
         this.tacoRepo = tacoRepo;
@@ -36,5 +41,11 @@ public class DesignRestController {
         }
 
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
+    @PostMapping(consumes = "application/json")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Taco postTaco(@RequestBody Taco taco) {
+        return tacoRepo.save(taco);
     }
 }

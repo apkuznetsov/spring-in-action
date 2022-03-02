@@ -1,19 +1,21 @@
 package ssau.kuznetsov.tacocloud.represents;
 
 import lombok.Getter;
-import org.springframework.hateoas.RepresentationModel;
+import org.springframework.hateoas.ResourceSupport;
 import ssau.kuznetsov.tacocloud.models.Ingredient;
 import ssau.kuznetsov.tacocloud.models.Taco;
 
 import java.util.Date;
 import java.util.List;
 
-public class TacoResource extends RepresentationModel<Taco> {
+public class TacoResource extends ResourceSupport {
 
     @Getter
     private final String name;
+
     @Getter
     private final Date createdAt;
+
     @Getter
     private final List<Ingredient> ingredients;
 

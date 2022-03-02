@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import ssau.kuznetsov.tacocloud.models.Taco;
 import ssau.kuznetsov.tacocloud.repositories.TacoRepository;
 import ssau.kuznetsov.tacocloud.represents.TacoResource;
-import ssau.kuznetsov.tacocloud.util.TacoResourceAssembler;
+import ssau.kuznetsov.tacocloud.resassemblers.TacoResourceAssembler;
 
 import java.util.List;
 

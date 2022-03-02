@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.util;
+package ssau.kuznetsov.tacocloud.resassemblers;
 
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 import ssau.kuznetsov.tacocloud.models.Taco;

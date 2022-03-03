@@ -1,0 +1,12 @@
+taco:
+  orders:
+    pageSize: 10
+
+  discount:
+    codes:
+      abcdef: 10
+
+spring:
+  data:
+    rest:
+      base-path: /api

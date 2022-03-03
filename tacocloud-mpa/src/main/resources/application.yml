@@ -5,3 +5,8 @@ taco:
   discount:
     codes:
       abcdef: 10
+
+spring:
+  data:
+    rest:
+      base-path: /api

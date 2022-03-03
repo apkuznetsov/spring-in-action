@@ -2,12 +2,14 @@ package ssau.kuznetsov.tacocloud.represents;
 
 import lombok.Getter;
 import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.core.Relation;
 import ssau.kuznetsov.tacocloud.models.Ingredient;
 import ssau.kuznetsov.tacocloud.models.Taco;
 
 import java.util.Date;
 import java.util.List;
 
+@Relation(value="taco", collectionRelation="tacos")
 public class TacoResource extends ResourceSupport {
 
     @Getter

@@ -18,3 +18,9 @@ spring:
     password: letm31n
     embedded:
       enabled: false
+
+  rabbitmq:
+    template:
+      receive-timeout: 30000
+    exchange: tacocloud.orders
+    routing-key: kitchens.central

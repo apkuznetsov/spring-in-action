@@ -1,23 +1,23 @@
-package ssau.kuznetsov.tacocloud.messaging;
+package ssau.kuznetsov.tacocloud.messaging.kafka;
 
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 import ssau.kuznetsov.tacocloud.kitchen.KitchenUi;
 import ssau.kuznetsov.tacocloud.models.Order;
 
 @Component
-public class OrderListener {
+public class KafkaOrderListener {
 
     private final KitchenUi ui;
 
     @Autowired
-    public OrderListener(KitchenUi ui) {
+    public KafkaOrderListener(KitchenUi ui) {
         this.ui = ui;
     }
 
-    @RabbitListener(queues = "tacocloud.order.queue")
-    public void receiveOrder(Order order) {
+    @KafkaListener(topics = "tacocloud.orders.topic")
+    public void handle(Order order) {
         ui.displayOrder(order);
     }
 }

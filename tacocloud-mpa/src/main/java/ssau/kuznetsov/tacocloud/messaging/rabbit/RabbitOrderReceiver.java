@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.messaging;
+package ssau.kuznetsov.tacocloud.messaging.rabbit;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.MessageConverter;

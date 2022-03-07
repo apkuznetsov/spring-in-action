@@ -1,8 +1,9 @@
-package ssau.kuznetsov.tacocloud.messaging;
+package ssau.kuznetsov.tacocloud.messaging.jms;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
+import ssau.kuznetsov.tacocloud.messaging.OrderReceiver;
 import ssau.kuznetsov.tacocloud.models.Order;
 
 @Component

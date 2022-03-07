@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.messaging;
+package ssau.kuznetsov.tacocloud.messaging.rabbit;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,12 +7,12 @@ import ssau.kuznetsov.tacocloud.kitchen.KitchenUi;
 import ssau.kuznetsov.tacocloud.models.Order;
 
 @Component
-public class OrderListener {
+public class RabbitOrderListener {
 
     private final KitchenUi ui;
 
     @Autowired
-    public OrderListener(KitchenUi ui) {
+    public RabbitOrderListener(KitchenUi ui) {
         this.ui = ui;
     }
 

@@ -19,6 +19,8 @@ public class Ingredient {
 
     private final String name;
 
+    private final String code;
+
     private final Type type;
 
     public enum Type {

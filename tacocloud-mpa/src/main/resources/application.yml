@@ -11,6 +11,9 @@ tacocloud:
   poll-rate: 10000
 
 spring:
+  main:
+    web-application-type: none
+
   data:
     rest:
       base-path: /api

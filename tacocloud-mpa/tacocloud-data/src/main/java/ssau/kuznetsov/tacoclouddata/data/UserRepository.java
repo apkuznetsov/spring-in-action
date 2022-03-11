@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.repositories;
+package ssau.kuznetsov.tacoclouddata.data;
 
 import org.springframework.data.repository.CrudRepository;
 import ssau.kuznetsov.tacocloud.models.User;

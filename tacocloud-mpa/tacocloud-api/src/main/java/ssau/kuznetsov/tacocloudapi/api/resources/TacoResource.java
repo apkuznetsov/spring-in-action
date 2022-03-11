@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.represents;
+package ssau.kuznetsov.tacocloudapi.api.resources;
 
 import lombok.Getter;
 import org.springframework.hateoas.ResourceSupport;

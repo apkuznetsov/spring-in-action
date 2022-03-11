@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.rest;
+package ssau.kuznetsov.tacocloudapi.api.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

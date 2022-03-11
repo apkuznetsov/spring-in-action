@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.rest;
+package ssau.kuznetsov.tacocloudapi.api.controllers;
 
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
@@ -7,7 +7,7 @@ import ssau.kuznetsov.tacocloud.models.Order;
 import ssau.kuznetsov.tacocloud.repositories.OrderRepository;
 
 @RestController
-@RequestMapping(path = "/design", produces = "application/json")
+@RequestMapping(path = "/orders", produces = "application/json")
 @CrossOrigin(origins = "*")
 public class OrderRestController {
 

@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.rest;
+package ssau.kuznetsov.tacocloudapi.api.controllers;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.PageRequest;
@@ -12,6 +12,8 @@ import ssau.kuznetsov.tacocloud.models.Taco;
 import ssau.kuznetsov.tacocloud.repositories.TacoRepository;
 import ssau.kuznetsov.tacocloud.represents.TacoResource;
 import ssau.kuznetsov.tacocloud.resassemblers.TacoResourceAssembler;
+import ssau.kuznetsov.tacocloudapi.api.resources.TacoResource;
+import ssau.kuznetsov.tacocloudapi.api.resassemblers.TacoResourceAssembler;
 
 import java.util.List;
 
@@ -50,7 +52,7 @@ public class RecentRestController {
 
         Resources<TacoResource> recentResources = new Resources<>(tacoResources);
         recentResources.add(
-                linkTo(methodOn(RecentRestController.class).recentTacos())
+                ControllerLinkBuilder.linkTo(ControllerLinkBuilder.methodOn(RecentRestController.class).recentTacos())
                         .withRel("recents")
         );
 

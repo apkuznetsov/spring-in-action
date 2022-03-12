@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.models;
+package ssau.kuznetsov.tacoclouddomain.domain;
 
 import lombok.AccessLevel;
 import lombok.Data;

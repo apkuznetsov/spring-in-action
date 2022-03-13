@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.messaging.jms;
+package ssau.kuznetsov.tacocloud.kitchen;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;

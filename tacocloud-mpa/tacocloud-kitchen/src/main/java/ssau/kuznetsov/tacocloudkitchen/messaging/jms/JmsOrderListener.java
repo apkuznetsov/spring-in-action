@@ -1,17 +1,18 @@
-package ssau.kuznetsov.tacocloud.kitchen;
+package ssau.kuznetsov.tacocloudkitchen.messaging.jms;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 import ssau.kuznetsov.tacocloud.models.Order;
 
+@Profile("jms-listener")
 @Component
-public class OrderListener {
+public class JmsOrderListener {
 
-    private final KitchenUi ui;
+    private KitchenUi ui;
 
     @Autowired
-    public OrderListener(KitchenUi ui) {
+    public JmsOrderListener(KitchenUI ui) {
         this.ui = ui;
     }
 
@@ -19,4 +20,5 @@ public class OrderListener {
     public void receiveOrder(Order order) {
         ui.displayOrder(order);
     }
+
 }

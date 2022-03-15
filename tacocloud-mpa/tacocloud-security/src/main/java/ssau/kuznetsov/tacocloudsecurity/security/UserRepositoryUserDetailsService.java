@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.services;
+package ssau.kuznetsov.tacocloudsecurity.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

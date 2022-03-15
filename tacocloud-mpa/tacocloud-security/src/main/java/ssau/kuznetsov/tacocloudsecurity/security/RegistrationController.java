@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.controllers;
+package ssau.kuznetsov.tacocloudsecurity.security;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;

@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.models;
+package ssau.kuznetsov.tacocloudsecurity.security;
 
 import lombok.Data;
 import org.springframework.security.crypto.password.PasswordEncoder;

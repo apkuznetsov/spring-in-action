@@ -49,4 +49,4 @@ dist/
 nbdist/
 .nb-gradle/
 
-tacocloud-mpa/tacocloud-ui/node_modules/
+tacocloud-ui/node_modules/

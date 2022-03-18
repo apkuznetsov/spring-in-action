@@ -1,6 +1,5 @@
-package ssau.kuznetsov.tacocloud.controllers;
+package ssau.kuznetsov.tacocloudweb.web;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -8,35 +7,50 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
-import ssau.kuznetsov.tacocloud.models.Order;
-import ssau.kuznetsov.tacocloud.models.User;
-import ssau.kuznetsov.tacocloud.properties.OrderProperties;
-import ssau.kuznetsov.tacocloud.repositories.OrderRepository;
 
-import javax.validation.Valid;
+import tacos.Order;
+import tacos.User;
+import tacos.data.OrderRepository;
 
 @Controller
 @RequestMapping("/orders")
 @SessionAttributes("order")
-@ConfigurationProperties(prefix = "taco.orders")
 public class OrderController {
 
-    private final OrderRepository orderRepo;
-    private final OrderProperties props;
+    private OrderRepository orderRepo;
 
-    public OrderController(
-            OrderRepository orderRepo, OrderProperties props) {
+    private OrderProps props;
 
+    public OrderController(OrderRepository orderRepo,
+                           OrderProps props) {
         this.orderRepo = orderRepo;
         this.props = props;
     }
 
     @GetMapping("/current")
-    public String orderForm() {
+    public String orderForm(@AuthenticationPrincipal User user,
+                            @ModelAttribute Order order) {
+        if (order.getDeliveryName() == null) {
+            order.setDeliveryName(user.getFullname());
+        }
+        if (order.getDeliveryStreet() == null) {
+            order.setDeliveryStreet(user.getStreet());
+        }
+        if (order.getDeliveryCity() == null) {
+            order.setDeliveryCity(user.getCity());
+        }
+        if (order.getDeliveryState() == null) {
+            order.setDeliveryState(user.getState());
+        }
+        if (order.getDeliveryZip() == null) {
+            order.setDeliveryZip(user.getZip());
+        }
+
         return "orderForm";
     }
 
@@ -67,4 +81,5 @@ public class OrderController {
 
         return "orderList";
     }
+
 }

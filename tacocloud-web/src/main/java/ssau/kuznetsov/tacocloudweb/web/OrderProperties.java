@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.properties;
+package ssau.kuznetsov.tacocloudweb.web;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

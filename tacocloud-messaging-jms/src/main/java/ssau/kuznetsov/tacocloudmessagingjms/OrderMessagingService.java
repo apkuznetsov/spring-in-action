@@ -1,4 +1,4 @@
-package ssau.kuznetsov.tacocloud.messaging;
+package ssau.kuznetsov.tacocloudmessagingjms;
 
 import ssau.kuznetsov.tacocloud.models.Order;
 

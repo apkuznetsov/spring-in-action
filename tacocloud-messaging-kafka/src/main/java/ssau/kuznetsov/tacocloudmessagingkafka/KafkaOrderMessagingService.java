@@ -1,10 +1,9 @@
-package ssau.kuznetsov.tacocloud.kitchen;
+package ssau.kuznetsov.tacocloudmessagingkafka;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
-import ssau.kuznetsov.tacocloud.messaging.OrderMessagingService;
-import ssau.kuznetsov.tacocloud.models.Order;
+import tacos.Order;
 
 @Service
 public class KafkaOrderMessagingService
@@ -20,6 +19,7 @@ public class KafkaOrderMessagingService
 
     @Override
     public void sendOrder(Order order) {
-        kafkaTemplate.sendDefault(order);
+        kafkaTemplate.send("tacocloud.orders.topic", order);
     }
+
 }

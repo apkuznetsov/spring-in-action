@@ -78,7 +78,8 @@ public class TacoCloudClient {
 
     public List<Ingredient> getAllIngredients() {
         return rest.exchange("http://localhost:8080/ingredients",
-                HttpMethod.GET, null, new ParameterizedTypeReference<List<Ingredient>>() {})
+                        HttpMethod.GET, null, new ParameterizedTypeReference<List<Ingredient>>() {
+                        })
                 .getBody();
     }
 
@@ -129,7 +130,8 @@ public class TacoCloudClient {
 
     public Iterable<Ingredient> getAllIngredientsWithTraverson() {
         ParameterizedTypeReference<Resources<Ingredient>> ingredientType =
-                new ParameterizedTypeReference<Resources<Ingredient>>() {};
+                new ParameterizedTypeReference<Resources<Ingredient>>() {
+                };
         Resources<Ingredient> ingredientRes =
                 traverson
                         .follow("ingredients")

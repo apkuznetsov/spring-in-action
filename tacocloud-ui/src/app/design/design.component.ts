@@ -1,7 +1,7 @@
-import { Component, OnInit, Injectable, Input } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Router } from '@angular/router/';
-import { CartService } from '../cart/cart-service';
+import {Component, OnInit, Injectable, Input} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Router} from '@angular/router/';
+import {CartService} from '../cart/cart-service';
 
 @Component({
   selector: 'taco-design',
@@ -39,6 +39,7 @@ export class DesignComponent implements OnInit {
         this.sauces = this.allIngredients.filter(s => s.type === 'SAUCE');
       });
   }
+
   // end::ngOnInit[]
 
   updateIngredients(ingredient, event) {
@@ -59,6 +60,7 @@ export class DesignComponent implements OnInit {
 
     this.router.navigate(['/cart']);
   }
+
   // end::onSubmit[]
 
 }

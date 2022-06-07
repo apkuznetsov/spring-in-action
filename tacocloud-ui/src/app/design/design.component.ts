@@ -1,4 +1,4 @@
-import {Component, OnInit, Injectable, Input} from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router/';
 import {CartService} from '../cart/cart-service';
@@ -29,7 +29,7 @@ export class DesignComponent implements OnInit {
 
   // tag::ngOnInit[]
   ngOnInit() {
-    this.httpClient.get('http://localhost:8080/ingredientsx')
+    this.httpClient.get('http://localhost:8080/ingredients')
       .subscribe(data => {
         this.allIngredients = data;
         this.wraps = this.allIngredients.filter(w => w.type === 'WRAP');

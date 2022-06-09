@@ -1,6 +1,6 @@
 package ssau.kuznetsov.tacocloudkitchen.kitchen;
 
-import ssau.kuznetsov.tacocloud.models.Order;
+import ssau.kuznetsov.tacocloudkitchen.models.Order;
 
 public interface OrderReceiver {
 

@@ -1,11 +1,6 @@
 package ssau.kuznetsov.tacocloudrestclient;
 
-import java.net.URI;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.hateoas.Resources;
 import org.springframework.hateoas.client.Traverson;
@@ -14,9 +9,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import lombok.extern.slf4j.Slf4j;
 import tacos.Ingredient;
+
+import java.net.URI;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Service
 @Slf4j

@@ -10,15 +10,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import ssau.kuznetsov.tacocloud.models.Taco;
 import ssau.kuznetsov.tacocloud.repositories.TacoRepository;
-import ssau.kuznetsov.tacocloud.represents.TacoResource;
-import ssau.kuznetsov.tacocloud.resassemblers.TacoResourceAssembler;
-import ssau.kuznetsov.tacocloudapi.api.resources.TacoResource;
 import ssau.kuznetsov.tacocloudapi.api.resassemblers.TacoResourceAssembler;
+import ssau.kuznetsov.tacocloudapi.api.resources.TacoResource;
 
 import java.util.List;
-
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RepositoryRestController
 public class RecentRestController {

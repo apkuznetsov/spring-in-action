@@ -1,10 +1,10 @@
 package ssau.kuznetsov.tacocloudkitchen.messaging.jms;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
-import ssau.kuznetsov.tacocloud.messaging.OrderReceiver;
-import ssau.kuznetsov.tacocloud.models.Order;
+import ssau.kuznetsov.tacocloudkitchen.kitchen.OrderReceiver;
+import ssau.kuznetsov.tacocloudkitchen.models.Order;
 
 @Profile("jms-template")
 @Component("templateOrderReceiver")

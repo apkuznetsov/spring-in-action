@@ -1,9 +1,9 @@
 package ssau.kuznetsov.tacocloudkitchen.models;
 
+import lombok.Data;
+
 import java.util.Date;
 import java.util.List;
-
-import lombok.Data;
 
 @Data
 public class Taco {

@@ -2,7 +2,7 @@ package ssau.kuznetsov.tacocloudkitchen.kitchen;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import ssau.kuznetsov.tacocloud.models.Order;
+import ssau.kuznetsov.tacocloudkitchen.models.Order;
 
 @Component
 @Slf4j

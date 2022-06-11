@@ -8,9 +8,9 @@
   <packaging>jar</packaging>
 
   <parent>
-    <groupId>sia</groupId>
-    <artifactId>taco-cloud-parent</artifactId>
-    <version>0.0.8-SNAPSHOT</version>
+    <groupId>ssau.kuznetsov</groupId>
+    <artifactId>tacocloud</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
   </parent>
 
   <name>tacocloud-ui</name>

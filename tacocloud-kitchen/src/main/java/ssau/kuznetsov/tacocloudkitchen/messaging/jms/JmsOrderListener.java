@@ -14,7 +14,7 @@ public class JmsOrderListener {
     private KitchenUi ui;
 
     @Autowired
-    public JmsOrderListener(KitchenUI ui) {
+    public JmsOrderListener(KitchenUi ui) {
         this.ui = ui;
     }
 

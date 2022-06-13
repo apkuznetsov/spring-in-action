@@ -11,10 +11,10 @@ import ssau.kuznetsov.tacocloudkitchen.models.Order;
 @Component
 public class RabbitOrderListener {
 
-    private KitchenUI ui;
+    private KitchenUi ui;
 
     @Autowired
-    public RabbitOrderListener(KitchenUI ui) {
+    public RabbitOrderListener(KitchenUi ui) {
         this.ui = ui;
     }
 

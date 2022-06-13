@@ -14,10 +14,10 @@ import ssau.kuznetsov.tacocloudkitchen.models.Order;
 @Slf4j
 public class KafkaOrderListener {
 
-    private KitchenUI ui;
+    private KitchenUi ui;
 
     @Autowired
-    public KafkaOrderListener(KitchenUI ui) {
+    public KafkaOrderListener(KitchenUi ui) {
         this.ui = ui;
     }
 

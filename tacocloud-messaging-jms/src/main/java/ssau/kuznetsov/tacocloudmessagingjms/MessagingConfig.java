@@ -1,13 +1,12 @@
 package ssau.kuznetsov.tacocloudmessagingjms;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.support.converter.MappingJackson2MessageConverter;
-
 import tacos.Order;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Configuration
 public class MessagingConfig {

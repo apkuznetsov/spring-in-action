@@ -1,5 +1,13 @@
 package ssau.kuznetsov.tacocloudkitchen.kitchen;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import ssau.kuznetsov.tacocloudkitchen.models.Order;
+
 @Profile({"jms-template", "rabbitmq-template"})
 @Controller
 @RequestMapping("/orders")

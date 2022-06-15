@@ -2,8 +2,6 @@ package ssau.kuznetsov.tacocloudapi.api.resassemblers;
 
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 import ssau.kuznetsov.tacocloud.models.Taco;
-import ssau.kuznetsov.tacocloud.represents.TacoResource;
-import ssau.kuznetsov.tacocloud.rest.DesignRestController;
 import ssau.kuznetsov.tacocloudapi.api.controllers.DesignRestController;
 import ssau.kuznetsov.tacocloudapi.api.resources.TacoResource;
 

@@ -1,11 +1,6 @@
 package ssau.kuznetsov.tacocloudrestclient;
 
-import java.net.URI;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.hateoas.Resources;
 import org.springframework.hateoas.client.Traverson;
@@ -14,9 +9,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import lombok.extern.slf4j.Slf4j;
 import tacos.Ingredient;
+
+import java.net.URI;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Service
 @Slf4j
@@ -78,7 +76,8 @@ public class TacoCloudClient {
 
     public List<Ingredient> getAllIngredients() {
         return rest.exchange("http://localhost:8080/ingredients",
-                HttpMethod.GET, null, new ParameterizedTypeReference<List<Ingredient>>() {})
+                        HttpMethod.GET, null, new ParameterizedTypeReference<List<Ingredient>>() {
+                        })
                 .getBody();
     }
 
@@ -129,7 +128,8 @@ public class TacoCloudClient {
 
     public Iterable<Ingredient> getAllIngredientsWithTraverson() {
         ParameterizedTypeReference<Resources<Ingredient>> ingredientType =
-                new ParameterizedTypeReference<Resources<Ingredient>>() {};
+                new ParameterizedTypeReference<Resources<Ingredient>>() {
+                };
         Resources<Ingredient> ingredientRes =
                 traverson
                         .follow("ingredients")

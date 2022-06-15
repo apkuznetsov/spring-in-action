@@ -1,11 +1,14 @@
 # Read Me First
+
 The following was discovered as part of building this project:
 
-* The original package name 'ssau.kuznetsov.taco-cloud' is invalid and this project uses 'ssau.kuznetsov.tacocloud' instead.
+* The original package name 'ssau.kuznetsov.taco-cloud' is invalid and this project uses 'ssau.kuznetsov.tacocloud'
+  instead.
 
 # Getting Started
 
 ### Reference Documentation
+
 For further reference, please consider the following sections:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
@@ -16,6 +19,7 @@ For further reference, please consider the following sections:
 * [Spring Web](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/#boot-features-developing-web-applications)
 
 ### Guides
+
 The following guides illustrate how to use some features concretely:
 
 * [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)

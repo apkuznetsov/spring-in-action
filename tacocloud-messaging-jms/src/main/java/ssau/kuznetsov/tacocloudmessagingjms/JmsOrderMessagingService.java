@@ -1,13 +1,12 @@
 package ssau.kuznetsov.tacocloudmessagingjms;
 
-import javax.jms.JMSException;
-import javax.jms.Message;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
-
 import tacos.Order;
+
+import javax.jms.JMSException;
+import javax.jms.Message;
 
 @Service
 public class JmsOrderMessagingService implements OrderMessagingService {

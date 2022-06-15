@@ -9,7 +9,7 @@ import ssau.kuznetsov.tacocloud.models.Taco;
 import java.util.Date;
 import java.util.List;
 
-@Relation(value="taco", collectionRelation="tacos")
+@Relation(value = "taco", collectionRelation = "tacos")
 public class TacoResource extends ResourceSupport {
 
     @Getter

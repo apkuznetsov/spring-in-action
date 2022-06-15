@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class KitchenApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(TacoKitchenApplication.class, args);
+        SpringApplication.run(KitchenApp.class, args);
     }
 }

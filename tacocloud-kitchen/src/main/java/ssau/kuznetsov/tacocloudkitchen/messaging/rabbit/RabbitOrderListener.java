@@ -2,18 +2,19 @@ package ssau.kuznetsov.tacocloudkitchen.messaging.rabbit;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
-import ssau.kuznetsov.tacocloud.kitchen.KitchenUi;
-import ssau.kuznetsov.tacocloud.models.Order;
+import ssau.kuznetsov.tacocloudkitchen.kitchen.KitchenUi;
+import ssau.kuznetsov.tacocloudkitchen.models.Order;
 
 @Profile("rabbitmq-listener")
 @Component
 public class RabbitOrderListener {
 
-    private KitchenUI ui;
+    private KitchenUi ui;
 
     @Autowired
-    public RabbitOrderListener(KitchenUI ui) {
+    public RabbitOrderListener(KitchenUi ui) {
         this.ui = ui;
     }
 

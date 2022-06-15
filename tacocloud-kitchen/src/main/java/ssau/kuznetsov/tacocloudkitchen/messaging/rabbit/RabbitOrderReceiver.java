@@ -3,9 +3,8 @@ package ssau.kuznetsov.tacocloudkitchen.messaging.rabbit;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
-
-import tacos.Order;
-import tacos.kitchen.OrderReceiver;
+import ssau.kuznetsov.tacocloudkitchen.kitchen.OrderReceiver;
+import ssau.kuznetsov.tacocloudkitchen.models.Order;
 
 @Profile("rabbitmq-template")
 @Component("templateOrderReceiver")

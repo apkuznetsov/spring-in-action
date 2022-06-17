@@ -18,12 +18,12 @@ import java.util.Map;
 
 @Service
 @Slf4j
-public class TacoCloudClient {
+public class TacocloudClient {
 
     private RestTemplate rest;
     private Traverson traverson;
 
-    public TacoCloudClient(RestTemplate rest, Traverson traverson) {
+    public TacocloudClient(RestTemplate rest, Traverson traverson) {
         this.rest = rest;
         this.traverson = traverson;
     }

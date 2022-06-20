@@ -15,7 +15,7 @@ public class RestExamples {
     }
 
     @Bean
-    public CommandLineRunner fetchIngredients(TacoCloudClient tacoCloudClient) {
+    public CommandLineRunner fetchIngredients(TacocloudClient tacoCloudClient) {
         return args -> {
             log.info("----------------------- GET -------------------------");
             log.info("GETTING INGREDIENT BY IDE");
@@ -30,7 +30,7 @@ public class RestExamples {
     }
 
     @Bean
-    public CommandLineRunner putAnIngredient(TacoCloudClient tacoCloudClient) {
+    public CommandLineRunner putAnIngredient(TacocloudClient tacoCloudClient) {
         return args -> {
             log.info("----------------------- PUT -------------------------");
             Ingredient before = tacoCloudClient.getIngredientById("LETC");
@@ -42,7 +42,7 @@ public class RestExamples {
     }
 
     @Bean
-    public CommandLineRunner addAnIngredient(TacoCloudClient tacoCloudClient) {
+    public CommandLineRunner addAnIngredient(TacocloudClient tacoCloudClient) {
         return args -> {
             log.info("----------------------- POST -------------------------");
             Ingredient chix = new Ingredient("CHIX", "Shredded Chicken", Ingredient.Type.PROTEIN);
@@ -59,7 +59,7 @@ public class RestExamples {
 
 
     @Bean
-    public CommandLineRunner deleteAnIngredient(TacoCloudClient tacoCloudClient) {
+    public CommandLineRunner deleteAnIngredient(TacocloudClient tacoCloudClient) {
         return args -> {
             log.info("----------------------- DELETE -------------------------");
             Ingredient before = tacoCloudClient.getIngredientById("CHIX");
@@ -92,7 +92,7 @@ public class RestExamples {
     }
 
     @Bean
-    public CommandLineRunner traversonGetIngredients(TacoCloudClient tacoCloudClient) {
+    public CommandLineRunner traversonGetIngredients(TacocloudClient tacoCloudClient) {
         return args -> {
             Iterable<Ingredient> ingredients = tacoCloudClient.getAllIngredientsWithTraverson();
             log.info("----------------------- GET INGREDIENTS WITH TRAVERSON -------------------------");
@@ -103,7 +103,7 @@ public class RestExamples {
     }
 
     @Bean
-    public CommandLineRunner traversonSaveIngredient(TacoCloudClient tacoCloudClient) {
+    public CommandLineRunner traversonSaveIngredient(TacocloudClient tacoCloudClient) {
         return args -> {
             Ingredient pico = tacoCloudClient.addIngredient(
                     new Ingredient("PICO", "Pico de Gallo", Ingredient.Type.SAUCE));

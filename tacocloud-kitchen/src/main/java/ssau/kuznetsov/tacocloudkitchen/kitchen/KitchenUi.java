@@ -9,7 +9,6 @@ import ssau.kuznetsov.tacocloudkitchen.models.Order;
 public class KitchenUi {
 
     public void displayOrder(Order order) {
-        log.info("RECEIVED ORDER:  " + order);
     }
 
 }

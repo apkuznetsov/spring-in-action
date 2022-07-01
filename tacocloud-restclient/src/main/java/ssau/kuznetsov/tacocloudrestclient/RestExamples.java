@@ -1,5 +1,19 @@
 package ssau.kuznetsov.tacocloudrestclient;
 
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.hateoas.MediaTypes;
+import org.springframework.hateoas.client.Traverson;
+import org.springframework.web.client.RestTemplate;
+import ssau.kuznetsov.tacoclouddomain.domain.Ingredient;
+
+import java.net.URI;
+import java.util.List;
+
 @SpringBootConfiguration
 @ComponentScan
 @Slf4j
@@ -57,7 +71,6 @@ public class RestExamples {
         };
     }
 
-
     @Bean
     public CommandLineRunner deleteAnIngredient(TacocloudClient tacoCloudClient) {
         return args -> {
@@ -79,10 +92,6 @@ public class RestExamples {
             log.info("AFTER:  " + after);
         };
     }
-
-    //
-    // Traverson examples
-    //
 
     @Bean
     public Traverson traverson() {
@@ -115,5 +124,4 @@ public class RestExamples {
             tacoCloudClient.deleteIngredient(pico);
         };
     }
-
 }
